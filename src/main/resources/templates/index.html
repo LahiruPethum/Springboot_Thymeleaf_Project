@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+<div align="center" class="container my-2" >
+  <h2>Student List</h2>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${listStudents}">
+      <th scope="row" th:text="${student.id}"></th>
+      <td th:text="${student.firstName}"></td>
+      <td th:text="${student.lastName}"></td>
+      <td th:text="${student.mail}"></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
