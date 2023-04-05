@@ -16,4 +16,9 @@ public class StudentServiceIMPL implements StudentService {
     public List<Student> getAllStudents() {
         return studentRepo.findAll();
     }
+
+    @Override
+    public void saveStudent(Student student) {
+        this.studentRepo.save(student);
+    }
 }
